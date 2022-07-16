@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  width: 40%;
+  width: 50%;
   height: 500px;
 }
 
@@ -26,8 +26,9 @@ body {
 }
 
 .content__text {
-  width: 40%;
-  padding: 20px 32px;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 32px;
 }
 
 p,
@@ -105,6 +106,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  top: 120px;
 }
 
 .attribution {
@@ -115,15 +118,14 @@ footer {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  text-decoration: none;
 }
 
 .img {
-  height: 500px;
   width: 50%;
   background-image: url("images/image-product-desktop.jpg");
   border-radius: 25px 0px 0px 25px;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 640px) {
@@ -148,8 +150,41 @@ footer {
   }
 
   .content__text {
+    box-sizing: border-box;
     width: 95%;
-    padding: 35px 25px;
+    padding: 25px;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img {
+    height: 200px;
+    width: 100%;
+    background-image: url("images/image-product-mobile.jpg");
+    border-radius: 25px 25px 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .content__text {
+    box-sizing: border-box;
+    width: 95%;
+    padding: 25px;
   }
 
   .attribution {
